@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from .models import Lead
 
+
 # Create booking view
 def book(request):
     if request.method == "POST":
@@ -25,7 +26,7 @@ def book(request):
                 f"Email: {email}\n\n"
                 f"We will be in touch soon."
             ),
-            #Temporary email setup, TODO create an email backend to handle email sending
+            # Temporary email setup, TODO create an email backend to handle email sending
             from_email="hello@weddingapp.com",
             recipient_list=[email],
             fail_silently=False,
