@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from .models import Lead
@@ -16,6 +17,7 @@ def book(request):
 
         Lead.objects.create(full_name=full_name, email=email)
 
+
         send_mail(
             subject="Thanks for reaching out",
             message=(
@@ -27,11 +29,10 @@ def book(request):
                 f"We will be in touch soon."
             ),
             # Temporary email setup, TODO create an email backend to handle email sending
-            from_email="hello@weddingapp.com",
+            from_email=None,
             recipient_list=[email],
             fail_silently=False,
         )
-
         return redirect("book_thanks")
 
     return render(request, "booking/book.html")
