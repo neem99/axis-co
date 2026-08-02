@@ -28,7 +28,6 @@ def book(request):
                 f"Email: {email}\n\n"
                 f"We will be in touch soon."
             ),
-            # Temporary email setup, TODO create an email backend to handle email sending
             from_email=None,
             recipient_list=[email],
             fail_silently=False,
