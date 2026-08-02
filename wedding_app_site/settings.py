@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
     # Your app
     "booking",
+    "portfolio",
     "anymail",
 ]
 
