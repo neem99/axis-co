@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    background-color: #020318;
+    color: #ffffff;
+}
+
+
+.site-header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    padding: 10px 40px;
+    min-height: 220px;
+}
+
+.menu-button {
+    justify-self: start;
+}
+
+.brand-link {
+    justify-self: center;
+}
+
+.header-logo {
+    display: block;
+    width: 200px;
+    height: auto;
+}
+
+.book-now {
+    justify-self: end;
+}
+
+.booking-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: calc(100vh - 200px);
+}
+
+.booking-form-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.booking-form-container h1 {
+    text-align: center;
+}
+
+.booking-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-row input {
+    padding: 12px;
+}
