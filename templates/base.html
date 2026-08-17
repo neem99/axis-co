@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}Axis & Co.{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header class="site-header">
+       <button class="menu-button" aria-label="Open navigation">
+            ☰
+        </button>
+
+        <a href="{% url 'home' %}" class="brand-link">
+            <img
+                src="{% static 'images/A&co.jpg' %}"
+                alt="Axis & Co."
+                class="header-logo"
+            >
+        </a>
+
+        <a href="{% url 'book' %}" class="book-now">
+            BOOK NOW
+        </a>
+
+    </header>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>>
+</body>
+</html>
