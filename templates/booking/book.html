@@ -1,25 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Book a consultation</title>
-</head>
-<body>
-    <h1>Book a consultation</h1>
+{% extends "base.html" %}
 
-    {% if error %}
-        <p style="color: red;">{{ error }}</p>
-    {% endif %}
+{% block title %}Book | Axis & Co.{% endblock %}
 
-    <form method="post">
-        {% csrf_token %}
+{% block content %}
+<div class = "booking-page">
+    <div class = "booking-from-container">
+        <h1>Book a Consultation</h1>
 
-        <label for="full_name">Full name</label><br>
-        <input type="text" id="full_name" name="full_name" required><br><br>
+        {% if error %}
+            <p>{{ error }}</p>
+        {% endif %}
 
-        <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <button type="submit">Submit</button>
-    </form>
-</body>
-</html>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-row">
+                <label for="full_name">Full name</label>
+                <input
+                    type="text"
+                    id="full_name"
+                    name="full_name"
+                >
+            </div>
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                >
+            </div>
+                <button type="submit">Submit</button>
+        </form>
+{% endblock %}
