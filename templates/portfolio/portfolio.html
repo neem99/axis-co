@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our work</title>
+</head>
+<body>
+    <h1>Weddings</h1>
+    <div class="portfolio-container">
+        {% for item in items %}
+            <img src="{{ item.image.url }}" alt="{{ item.alt_text }}">
+        {% endfor %}
+    </div>
+</body>
+</html>
