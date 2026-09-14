@@ -84,6 +84,20 @@ body {
     gap: 20px;
 }
 
+.booking-submit {
+    background-color : white;
+    color: #020318;
+    border-radius:6px;
+    padding:10px 20px;
+    margin-top: 15px;
+    cursor:pointer;
+    transition: transform 0.3s ease;
+}
+
+.booking-submit:hover {
+    transform:scale(1.05);
+}
+
 .form-row {
     display: flex;
     flex-direction: column;
