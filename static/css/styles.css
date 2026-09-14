@@ -30,6 +30,21 @@ body {
 
 .book-now {
     justify-self: end;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 999px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 8px 16px;
+    border: 1px solid white;
+    transition: 0.3s ease;
+}
+
+.book-now:hover {
+    padding: 12px 28px;
+    background-color: white;
+    color: #020318;
 }
 
 .booking-page {
