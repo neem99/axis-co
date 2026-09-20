@@ -11,9 +11,16 @@
 </head>
 <body>
 <header class="site-header">
-       <button class="menu-button" aria-label="Open navigation">
+       <button class="menu-button" aria-label="Open navigation" onclick="toggleMenu()">
             ☰
         </button>
+
+        <nav class = "nav-menu"  id="navMenu">
+            <a href = "{% url 'home' %}">Home</a>
+            <a href = "{% url 'portfolio_home' %}">Portfolio</a>
+<!--            <a href = "{% url 'home' %}">About Us</a>-->
+<!--            <a href = "{% url 'home' %}">Testimonials</a>-->
+        </nav>
 
         <a href="{% url 'home' %}" class="brand-link">
             <img
@@ -28,9 +35,17 @@
         </a>
 
     </header>
-<main>
-    {% block content %}
-    {% endblock %}
-</main>>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <script>
+              function toggleMenu() {
+                    const menu = document.getElementById('navMenu');
+                    menu.classList.toggle('active');
+                }
+
+    </script>
+
 </body>
 </html>

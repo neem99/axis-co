@@ -27,7 +27,7 @@ urlpatterns = [
     path("", home, name="home"),
     path('admin/', admin.site.urls),
     path("", include("booking.urls")),
-    path("portfolio/", include("portfolio.urls")),
+    path("portfolio/", include("portfolio.urls"), name='portfolio_home'),
 
 ]
 
