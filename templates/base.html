@@ -11,7 +11,7 @@
 </head>
 <body>
 <header class="site-header">
-       <button class="menu-button" aria-label="Open navigation" onclick="toggleMenu()">
+       <button class="menu-button" aria-label="Open navigation" onclick="toggleMenu(event)">
             ☰
         </button>
 
@@ -40,12 +40,30 @@
         {% endblock %}
     </main>
     <script>
-              function toggleMenu() {
-                    const menu = document.getElementById('navMenu');
-                    menu.classList.toggle('active');
-                }
+    // 1. Toggle the menu when clicking the hamburger button
+    function toggleMenu(event) {
+        // Prevent this click from immediately triggering the window click listener below
+        if (event) event.stopPropagation();
 
+        const menu = document.getElementById('navMenu');
+        menu.classList.toggle('active');
+    }
+
+    // 2. Listen for clicks anywhere on the entire page
+    window.addEventListener('click', function(event) {
+        const menu = document.getElementById('navMenu');
+        const menuButton = document.querySelector('.menu-button');
+
+        // Check if the menu is open AND the user clicked outside the menu and the button
+        if (menu.classList.contains('active') &&
+            !menu.contains(event.target) &&
+            !menuButton.contains(event.target)) {
+
+            menu.classList.remove('active'); // Close the menu smoothly
+        }
+    });
     </script>
+
 
 </body>
 </html>
