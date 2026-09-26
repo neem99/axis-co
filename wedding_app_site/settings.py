@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     # Your app
+    "core",
     "booking",
     "portfolio",
     "anymail",
