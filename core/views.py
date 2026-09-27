@@ -9,3 +9,8 @@ def home(request):
 
 def about(request) :
     return render(request,"about.html")
+
+def testimonials(request) :
+    return render(request, "testimonials.html")
+
+

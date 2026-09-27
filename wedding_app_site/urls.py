@@ -28,8 +28,6 @@ urlpatterns = [
     path("", include("booking.urls")),
     path("portfolio/", include("portfolio.urls"), name='portfolio_home'),
     path("", include("core.urls")),
-
-
 ]
 
 if settings.DEBUG:
