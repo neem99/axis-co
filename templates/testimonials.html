@@ -4,12 +4,13 @@
 
 {% block content %}
 
-<div class="about-page">
+<div class="testimonials-page">
     <h1>Testimonials</h1>
-
-    <p>
-        Temporary Testimonials content.
-    </p>
+    {% for testimonial in testimonials %}
+        <div class="testimonial-card">
+            <p>{{ testimonial.quote }}</p>
+            <p>{{ testimonial.client_name }}</p>
+        </div>
+    {% endfor %}
 </div>
-
 {% endblock %}
