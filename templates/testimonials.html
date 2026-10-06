@@ -7,13 +7,22 @@
 <div class="testimonials-page">
     <h1>Testimonials</h1>
 
-    <div class="testimonial-track">
-        {% for testimonial in testimonials %}
-            <div class="testimonial-card">
-                <p class="testimonial-quote">{{ testimonial.quote }}</p>
-                <p class="testimonial-client">{{ testimonial.client_name }}</p>
-            </div>
-        {% endfor %}
+    <div class="testimonial-slider">
+        <div class="testimonial-track">
+            {% for testimonial in testimonials %}
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">{{ testimonial.quote }}</p>
+                    <p class="testimonial-client">{{ testimonial.client_name }}</p>
+                </div>
+            {% endfor %}
+
+            {% for testimonial in testimonials %}
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">{{ testimonial.quote }}</p>
+                    <p class="testimonial-client">{{ testimonial.client_name }}</p>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock %}
