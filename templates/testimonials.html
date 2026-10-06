@@ -1,16 +1,19 @@
 {% extends "base.html" %}
 
-{% block title %}About Us | Axis & Co.{% endblock %}
+{% block title %}Testimonials | Axis & Co.{% endblock %}
 
 {% block content %}
 
 <div class="testimonials-page">
     <h1>Testimonials</h1>
-    {% for testimonial in testimonials %}
-        <div class="testimonial-card">
-            <p>{{ testimonial.quote }}</p>
-            <p>{{ testimonial.client_name }}</p>
-        </div>
-    {% endfor %}
+
+    <div class="testimonial-track">
+        {% for testimonial in testimonials %}
+            <div class="testimonial-card">
+                <p class="testimonial-quote">{{ testimonial.quote }}</p>
+                <p class="testimonial-client">{{ testimonial.client_name }}</p>
+            </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
