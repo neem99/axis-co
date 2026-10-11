@@ -145,7 +145,7 @@ ANYMAIL = {
 
 DEFAULT_FROM_EMAIL = os.getenv(
     "DEFAULT_FROM_EMAIL",
-    "bookings@axisandco.studio",
+    "Axis & Co. <bookings@axisandco.studio>",
 )
 
 #Media handling
