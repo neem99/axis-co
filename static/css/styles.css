@@ -122,6 +122,16 @@ body {
     overflow-x: hidden;
 }
 
+.booking-subtitle {
+    font-size: 15px;
+    color: #b8bfd1;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 35px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
 .booking-form-container {
     width: 100%;
     max-width: 450px;
