@@ -116,6 +116,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
     min-height: calc(100vh - 200px);
 }
 
@@ -157,42 +158,3 @@ body {
 .form-row input {
     padding: 12px;
 }
-
-.testimonials-page {
-    text-align:center;
-
-}
-
-.testimonial-track {
-    display: flex;
-    gap: 30px;
-    width: max-content;
-    animation: testimonial-scroll 20s linear infinite;
-}
-
-.testimonial-card {
-    min-width: 300px;
-    padding: 25px;
-    border: 1px solid white;
-    border-radius: 8px;
-}
-
-.testimonial-client {
-    margin-top: 20px;
-}
-
-.testimonial-slider {
-    width: 100%;
-    overflow: hidden;
-}
-
-@keyframes testimonial-scroll {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
-}
-
